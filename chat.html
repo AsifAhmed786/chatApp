@@ -32,15 +32,22 @@
 </head>
 
 <body>
-    <div class="bg-dark p-2">
-        <h1 class="text-light">Sylani Welfare</h1>
-        <h1 class="text-light">Chat App Login</h1>
+    <div class="container-fluid">
+        <div class="bg-primary row">
+            <div class="text-center col-lg-12 col-md-12 col-sm-12">
+                <img src="images/Saylani-logo.png" class="img-fluid" alt="">
+                <h2 class="text-light">Sylani Welfare Trust</h2>
+                <h2 class="text-light">Chat App</h2>
+
+            </div>
+        </div>
     </div>
 
 
 
-    <div class="chatarea pt-2">
+    <div class="chatarea">
         <div id="onlinediv">
+            <p class="bg-primary text-left text-light font-weight-bold">Online Users</p>
             <select name="" id="users" multiple>
                 <option>Hassan</option>
                 <option>Hassan1</option>
@@ -48,9 +55,11 @@
             </select>
         </div>
         <div id="chatdiv">
-            <div id="chats"></div>
-            <input type="text" name="" id="chat">
-            <button class="btn btn-primary mt-1" onclick="sendChat()">Send</button>
+            <p class="bg-primary text-left text-light font-weight-bold mt-2">Messages</p>
+            <div id="chats" class="text-left"></div>
+            <br>
+            <input type="text" name="" id="chat" class="rounded-pill">
+            <button class="btn btn-primary rounded-pill send-btn" onclick="sendChat()">Send</button>
         </div>
     </div>
 
