@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -52,6 +53,10 @@
             <center>
                 <table>
                     <tr>
+                        <td><label for="name1" id='namel'>Name</label> </td>
+                        <td><input type="text" id="name1" placeholder="User Name (signup only)" name="name" class="rounded-pill border-primary p-3"></td>
+                    </tr>
+                    <tr>
                         <td><label for="email" id='emaill'>Email</label> </td>
                         <td><input type="text" id="email" placeholder="Email" name="email" class="rounded-pill border-primary p-3"></td>
                     </tr>
@@ -62,10 +67,12 @@
                 </table>
 
             </center>
-            <button class="btn btn-primary mt-5 rounded-pill login-btn" onclick="chkSubmit()"
-                id="startChat()">Log in</button>
+            <button class="btn btn-primary mt-5 rounded-pill login-btn" onclick="signin()"
+                id="login">Log in</button>
+                <button class="btn btn-primary mt-5 rounded-pill login-btn" onclick="signup()"
+                id="signup">Quick Signup</button>
                 <br><br>
-                <p>or <a href="">Signup</a> or Login through <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></p>
+                <p>or Signup through <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></p>
                 
      
     
@@ -75,7 +82,7 @@
     
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="script/app.js"></script>
 </body>
 
 </html>

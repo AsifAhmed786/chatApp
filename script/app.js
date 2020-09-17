@@ -1,10 +1,17 @@
-const auth = ()=>{
+let chat = document.getElementById("chat")
+let chats = document.getElementById("chats")
+var email = document.getElementById("email")
+var pass = document.getElementById("pass")
+var name1 = document.getElementById("name1")
+
+const auth = () => {
     window.open("chat.html")
 }
 
-let chat = document.getElementById("chat")
-let chats = document.getElementById("chats")
-const sendChat = ()=>{
+
+
+
+const sendChat = () => {
     console.log(chat.value)
     let textNode = document.createTextNode(chat.value)
     let chatp = document.createElement("p")
@@ -15,10 +22,75 @@ const sendChat = ()=>{
     console.log(a)
 }
 
-const getUsers = ()=>{
+const getUsers = () => {
 }
 
 
-const getessage = ()=>{
+const getessage = () => {
 
+}
+
+const signup = () => {
+
+    firebase.auth().createUserWithEmailAndPassword(email.value, pass.value)
+        .then(function (value) {
+            alert("Signup successful please login")
+            // console.log(typeof(name1.value))
+            addUserDB(name1.value,email.value)
+            email.value = ""
+            pass.value = ""
+        })
+
+        .catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+            alert("=Something went wrong, user alraeady exists or password doesn't match policy requirement or please fill email and password fields for signing up ")
+        });
+
+}
+
+
+const addUserDB = (name12,email12) => {
+    let database = firebase.database();
+    let databasekey = database.ref("database/users").push().key
+    database.ref("database/users").child(databasekey).set({
+        key1: databasekey,
+        username1: name12,
+        email1: email12
+    })
+        .then(function (value) {
+            console.log("user added in database")
+        })
+        .catch(function (error) {
+            console.log("something went wrong in database")
+        })
+    console.log(email.value)
+}
+
+
+
+
+
+
+
+
+const signin = () => {
+    // console.log(typeof(name1.value))
+
+    firebase.auth().signInWithEmailAndPassword(email.value, pass.value)
+        .then(function (value) {
+            console.log("signin successful")
+            window.open("chat.html")
+
+        })
+
+        .catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+            alert("user doesn't exists or password / email is incorrect")
+        });
 }

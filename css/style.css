@@ -9,7 +9,7 @@
 
 /* index css */
 
-#email, #pass{
+#email, #pass, #name1{
     width: 250px;
     margin-top: 15px;
     height: 50px;
@@ -24,7 +24,7 @@
 }
 
 .login-btn{
-    width: 100px !important;
+    width: 200px !important;
 }
 /* index css finished*/
 
