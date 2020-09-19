@@ -31,7 +31,7 @@
     <title>Chat</title>
 </head>
 
-<body>
+<body onload="onlineChk()">
     <div class="container-fluid">
         <div class="bg-primary row">
             <div class="text-center col-lg-12 col-md-12 col-sm-12">
@@ -48,10 +48,10 @@
     <div class="chatarea">
         <div id="onlinediv">
             <p class="bg-primary text-left text-light font-weight-bold">Online Users</p>
-            <select name="" id="users" multiple>
-                <option>Hassan</option>
-                <option>Hassan1</option>
-                <option>Hassan2</option>
+            <select name="" id="onlineusers" multiple>
+                <!-- <option>Hassan</option> -->
+                <!-- <option>Hassan1</option> -->
+                <!-- <option>Hassan2</option> -->
             </select>
         </div>
         <div id="chatdiv">

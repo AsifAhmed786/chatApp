@@ -57,6 +57,12 @@
     /* height: 250px; */
 }
 
+
+option{
+    width: 300px;
+}
+
+
 #chats{
     /* width: 400px; */
     border: solid 1px black;
