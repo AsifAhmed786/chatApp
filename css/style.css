@@ -14,6 +14,11 @@
     margin-top: 15px;
     height: 50px;
     outline: none;
+    background-color: lightgrey;
+    border:white;
+    border-radius: 10px;
+    
+    
 }
 
 
@@ -24,22 +29,24 @@
 }
 
 .login-btn{
-    width: 200px !important;
+    width: 150px !important;
 }
 
 
 .logindiv1{
     margin: 0 auto;
-    margin-top: 2%;
-    padding-top: 5%;
+    margin-top: 5%;
+    padding-top: 1%;
     text-align: center;
-    width: 500px;
+    width: 400px;
     background-color: lightskyblue;
     border-radius: 20px;
+    box-shadow: 1px 1px 10px grey;
 }
 table{
     margin: 0 auto;
 }
+
 
 
 /* index css finished*/
@@ -57,6 +64,7 @@ table{
     padding-top: 2%;
     padding-left: 10%;
     padding-right: 10%;
+    /* width: 800px !important; */
     /* display: flex;     */
     /* text-align: center; */
     /* width: 300px; */
@@ -72,7 +80,7 @@ table{
 }
 
 .onlineusers1{
-    width: 400px;
+    /* width: 800px; */
     margin: 0 auto;
     font-weight: bold;
 
@@ -87,14 +95,15 @@ table{
 
 select{
     background-color:lightblue;
-    color: white;
+    width: 100%;
+    /* color: white; */
     /* outline: none; */
     border-radius: 10px;
     
 }
 option{
-    width: 400px;
-    font-weight: bold;
+    /* width: 400px; */
+    /* font-weight: bold; */
 }
 
 
@@ -112,6 +121,13 @@ option{
 .send-btn{
     width: 100px;
 }
+.sendText{
+    /* background-color: lightgrey; */
+    border: black;
+    border-radius: 10px;   
+}
+
+
 
 #chat{
     width: 400px;

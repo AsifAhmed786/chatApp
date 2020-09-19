@@ -6,6 +6,44 @@ var name1 = document.getElementById("name1")
 var onlineusers = document.getElementById("onlineusers")
 var mainuser;
 
+
+// let getAllKeys = () => {
+//     let keys1 = []
+//     let resultusername;
+//     firebase.database().ref("database/users").once("value", function (data) {
+
+//     })
+//         .then(function (data) {
+//             var abc = data.val()
+//             for (var keys123 in data.val()) {
+//                 console.log(keys123)
+//                 keys1.push(keys123)
+//             }
+//             return keys1
+//         })
+//         .catch(function (data) {
+//             console.log("error generated")
+//         })
+        
+// }
+// console.log(getAllKeys())
+
+// for(var abc = 0; abc.length; abc++){
+//     firebase.database().ref("database/users"+keys1[abc]).once("value", function (data) {
+
+//     })
+//         .then(function (data) {
+//             console(data.val().email1)                
+
+//         })
+//         .catch(function (data) {
+//             console.log("error generated")
+//         }) 
+// }
+
+
+
+
 const auth = () => {
     window.open("chat.html")
 }
@@ -14,16 +52,17 @@ const auth = () => {
 
 
 const sendChat = () => {
-    
+
 
     // console.log(chat.value)
-    
+
     // chats.innerHTML = (chat.value)
     let database = firebase.database()
     database.ref("database/chat").push({
         message: (`<${mainuser} says> : ${chat.value}`)
-   })
+    })
     // console.log(a)
+    chat.value = ""
 }
 
 
@@ -98,7 +137,12 @@ const signin = () => {
             })
                 .then(function (value) {
                     console.log("login successful")
-                    window.open("chat.html?name="+email.value)
+                    window.open("chat.html?name=" + email.value)
+
+
+
+
+
                 })
                 .catch(function (error) {
                     console.log("something went wrong in database")
@@ -116,28 +160,28 @@ const signin = () => {
 
 
 let onlineChk = () => {
-    
+
     let database = firebase.database();
-    database.ref("database/users").on("child_added",function (data){
+    database.ref("database/users").on("child_added", function (data) {
         // var key123 = data.key
         // let userlist = document.createTextNode(data.val().username1)
         let userlistp = document.createElement("option")
-        userlistp.innerHTML += data.val().username1
+        userlistp.innerHTML += "<img src='bg.jpg'>"+data.val().username1
         // userlistp.appendChild(userlist)
-        onlineusers.appendChild(userlistp)         
+        onlineusers.appendChild(userlistp)
         const params = new URLSearchParams(window.location.search)
         mainuser = params.get("name")
         console.log(mainuser)
-        
+
     })
 
 
     // let database = firebase.database();
-    database.ref("database/chat").on("child_added",function (data){
+    database.ref("database/chat").on("child_added", function (data) {
         let textNode = document.createTextNode(data.val().message)
         let chatp = document.createElement("p")
         chatp.appendChild(textNode)
-        chats.appendChild(chatp)       
+        chats.appendChild(chatp)
         chatp.className = " chatdatabse"
     })
 

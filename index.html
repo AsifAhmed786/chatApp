@@ -29,6 +29,12 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+    <style>
+        body{
+            background-image: url(bg.jpg);
+        }
+    </style>
+    
     <title>Sylani Chat App</title>
 
 
@@ -36,37 +42,24 @@
 
 </head>
 
-<body>
-
-    <div class="container-fluid">
-        <div class="bg-primary row">
-            <div class="text-center col-lg-12 col-md-12 col-sm-12">
-                <img src="images/Saylani-logo.png" class="img-fluid" alt="">
-                <h2 class="text-light">Sylani Welfare Trust</h2>
-                <h2 class="text-light">Chat App</h2>
-
-            </div>
-        </div>
-    </div>
-    
+<body class="indexbody">  
         <div class="logindiv1">
-            
+            <h2 class="text-light">CHAT APP</h2>
+            <br>
                 <table>
                     <tr>
                         <td><label for="name1" id='namel'>Name</label> </td>
-                        <td><input type="text" id="name1" placeholder="User Name (signup only)" name="name" class="rounded-pill border-primary p-3"></td>
+                        <td><input type="text" id="name1" placeholder="User Name (signup only)" name="name" class="p-3"></td>
                     </tr>
                     <tr>
                         <td><label for="email" id='emaill'>Email</label> </td>
-                        <td><input type="text" id="email" placeholder="Email" name="email" class="rounded-pill border-primary p-3"></td>
+                        <td><input type="text" id="email" placeholder="Email" name="email" class="p-3"></td>
                     </tr>
                     <tr>
                         <td><label for="pass" id='emaill'>Password</label> </td>
-                        <td><input type="password" id="pass" name="pass" placeholder="Password" class="rounded-pill border-primary p-3"></td>
+                        <td><input type="password" id="pass" name="pass" placeholder="Password" class="p-3"></td>
                     </tr>
-                </table>
-
-            
+                </table>           
             <button class="btn btn-primary mt-5 rounded-pill login-btn" onclick="signin()"
                 id="login">Log in</button>
                 <button class="btn btn-primary mt-5 rounded-pill login-btn" onclick="signup()"
