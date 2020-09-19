@@ -26,6 +26,22 @@
 .login-btn{
     width: 200px !important;
 }
+
+
+.logindiv1{
+    margin: 0 auto;
+    margin-top: 2%;
+    padding-top: 5%;
+    text-align: center;
+    width: 500px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+}
+table{
+    margin: 0 auto;
+}
+
+
 /* index css finished*/
 
 
@@ -33,6 +49,7 @@
 
 
 
+/* chat.html started */
 
 .chatarea{
     margin: 0 auto;
@@ -42,6 +59,7 @@
     padding-right: 10%;
     /* display: flex;     */
     /* text-align: center; */
+    /* width: 300px; */
 }
 
 #onlinediv, #chatdiv{
@@ -50,16 +68,33 @@
     /* height: 300px; */
     /* background-color: blue; */
     /* border: solid 1px black; */
+    /* background: white; */
 }
+
+.onlineusers1{
+    width: 400px;
+    margin: 0 auto;
+    font-weight: bold;
+
+
+}
+
 
 #users{
     width: 100%;
     /* height: 250px; */
 }
 
-
+select{
+    background-color:lightblue;
+    color: white;
+    /* outline: none; */
+    border-radius: 10px;
+    
+}
 option{
-    width: 300px;
+    width: 400px;
+    font-weight: bold;
 }
 
 
@@ -69,6 +104,8 @@ option{
     height: 250px;
     background-color: white;
     overflow: scroll;
+    background-color:lightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -77,7 +114,18 @@ option{
 }
 
 #chat{
-    width: 500px;
+    width: 400px;
     height: 40px;
     outline: none;
+    margin-bottom: 5px;
+}
+
+.chatdatabse{
+    font-size: 18px;
+    
+}
+
+.messages{
+    border-radius: 10px;
+    
 }

@@ -21,7 +21,7 @@ const sendChat = () => {
     // chats.innerHTML = (chat.value)
     let database = firebase.database()
     database.ref("database/chat").push({
-        message: (`${mainuser} says: ${chat.value}`)
+        message: (`<${mainuser} says> : ${chat.value}`)
    })
     // console.log(a)
 }
@@ -47,6 +47,7 @@ const signup = () => {
             // console.log(name1.value,email.value,"this is result")
             email.value = ""
             pass.value = ""
+            name1.value = ""
         })
 
         .catch(function (error) {
@@ -137,6 +138,7 @@ let onlineChk = () => {
         let chatp = document.createElement("p")
         chatp.appendChild(textNode)
         chats.appendChild(chatp)       
+        chatp.className = " chatdatabse"
     })
 
 
